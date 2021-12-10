@@ -5,6 +5,7 @@ import ProdCard from "./components/ProdCard.jsx";
 import Filters from "./components/Filters.jsx";
 import FilterSideBar from "./components/FilterSideBar.jsx";
 import SubjectsBar from "./components/SubjectsBar.jsx";
+import SearchPage from "./components/SearchPage.jsx";
 
 function App() {
 
@@ -23,7 +24,7 @@ let cardprop = {chapterName:"Heat",
   //   <Filters/>
   //   <ProdCard propobj={cardprop}/>
   //   <BottomBar/></div> );
-  return(<div><SubjectsBar/>
+  return(<div><SearchPage/>
     </div>);
 }
 
