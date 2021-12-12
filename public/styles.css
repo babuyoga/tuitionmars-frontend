@@ -18,7 +18,150 @@ body{
   background-color:#22232F;
   font-family: 'M PLUS 2', sans-serif;
 }
+/*login page start*/
+.login-box-holder{
+  width:100vw;
+  height:100vh;
+  background: #373c4e;
+  margin:auto;
+}
 
+
+.googleAuth-login-button .fab{
+  margin-right:10px;
+  font-size:1.3rem;
+}
+
+.login-box{
+  background-color:#22232F;
+  height:500px;
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content: flex-start;
+  position:fixed;
+  margin: auto;
+  bottom:0;
+  border-radius: 12px 12px 0 0;
+  border-top: 3px solid #00D08B;
+  padding:20px 0 10px 0;
+
+  }
+.login-form{
+  margin: 20px auto;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  width:fit-content;
+  height:fit-content;
+  border-bottom:2px solid #7781ad;
+  padding-bottom:20px;
+}
+.login-form-title{
+  font-size:2.6rem;
+  font-weight:bold;
+  margin:0px 10px 30px ;
+  color:#7781ad;;
+  text-align: center;
+}
+.login-input-holder{
+padding:10px 20px;
+max-width:318px;
+margin:10px;
+background-color:none;
+display:flex;
+flex-direction:column;
+justify-content: center;
+box-sizing: border-box;
+border: 2px solid #7781ad;
+border-radius: 35px;
+}
+.login-input-holder:focus-within input{
+color:#00D08B;
+}
+.login-input-holder:focus-within {
+  border: 2px solid #00D08B;
+}
+
+.login-form:focus-within  .login-form-title{
+  color:#00D08B;
+}
+.login-input-holder:focus-within input::placeholder{
+color:#00D08B;
+}
+
+.login-input-holder input {
+  width:270px;
+  height:28px;
+  outline:none;
+  border:none;
+background-color:#22232F;
+color:#7781ad;;
+font-size:1.2rem;
+}
+
+.login-input-holder input::placeholder{
+  color:#7781ad;
+  font-size:1.2rem;
+}
+
+.login-input-button{
+width:200px;
+height:48px;
+border-radius: 24px;
+border:none;
+color:#22232F;
+font-size:1.2rem;
+margin:10px;
+background-color: #00D08B;
+}
+
+.login-input-button:hover{
+  background-color:#00FFAA;
+}
+
+.googleAuth-holder{
+  background-color:none;
+  width:100%;
+  height:100px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.googleAuth-login-button{
+  width:318px;
+  height:50px;
+  border-radius: 24px;
+  border:none;
+  color:#22232F;
+  font-size:1.2rem;
+  font-weight:bold;
+  margin:10px auto;
+  background-color: #5C6486;
+}
+
+.googleAuth-login-button:hover{
+    background-color:#7781ad;
+}
+
+.signup-text-link-login{
+  margin:auto;
+  font-size:1.1rem;
+  font-weight:bold;
+  color:#7781ad;
+}
+
+.signup-text-link-login > a{
+  text-decoration: none;
+  color:#00D08B;
+}
+
+.signup-text-link-login > a:hover{
+  color:#00FFAA;
+}
+
+/*login page end*/
 .everything-container{
   min-height:100vh;
   height:fit-content;
@@ -47,7 +190,7 @@ flex-grow:1;
   flex-direction:row;
   gap:2px;
   justify-content: flex-start;
-padding: 50px 0px 0px 50px;
+padding: 50px 50px 0px 50px;
   flex-wrap: wrap;
 }
 .topnavbar{
@@ -314,9 +457,13 @@ overflow:hidden;
 }
 
 .prod-card:hover{
-  box-shadow: 0px 4px 8px 0px #000000ab;
+  box-shadow: 0px 4px 8px 0px #ffffff1b;
+    border: 1px solid #00FFAAab;
 }
 
+.prod-card:hover .prod-card--txt-item{
+  color:#ffffff;
+}
 .prod-card-img{
   width:100%;
   height:45%;
@@ -343,7 +490,7 @@ overflow:hidden;
   width:100%;
   background-color: none;
   flex-grow:0;
-  color:#9DA9C1;
+  color:#ffffff;
   font-size:0.9rem;
 }
 
@@ -508,17 +655,19 @@ margin-bottom:25px;
 
 @media only screen and (min-width: 900px) and (max-width:1200px) {
 
-  .bottombar{
-    display:none;
-    bottom:-10px;
-    transition: bottom 3s, display 3s;
-  }
   #menu{
     display:flex;
     flex-direction: column;
     justify-content: center;
     flex-grow:1;
   }
+
+  .bottombar{
+    display:none;
+    bottom:-10px;
+    transition: bottom 3s, display 3s;
+  }
+
 
   .topnavbar{
     gap:1px;
@@ -632,7 +781,59 @@ background-color:transparent;
 
 }
 
+@media only screen and (min-width: 900px){
 
+
+  /* Login Component */
+
+  .login-form-title{
+    font-size:2.4rem;
+    font-weight:bold;
+    margin:10px ;
+    color:#7781ad;;
+    text-align: left;
+  }
+
+
+
+ .login-box-holder{
+   display:flex;
+ }
+  .login-box{
+    max-width:960px;
+    height:560px;
+    position:relative;
+    margin:auto;
+    flex-direction: row;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 70px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    border-bottom: 6px solid #00D08B;
+  }
+
+  .login-form{
+    margin:auto;
+      border-right:2px solid #7781ad;
+        border-bottom:none;
+  padding-right:80px;
+
+  }
+
+
+
+  .googleAuth-holder{
+  width:fit-content;
+  max-width:476px;
+  margin:auto;
+  flex-grow: 1;
+  padding-left: 80px;
+  box-sizing: border-box;
+  }
+  /*Login Component*/
+
+}
 
 @media only screen and (min-width: 1200px) {
 .filter-holder{
@@ -643,6 +844,8 @@ background-color:transparent;
     bottom:-10px;
     transition: bottom 3s, display 3s;
   }
+
+
 
 #menu{
   display:flex;

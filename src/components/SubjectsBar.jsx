@@ -67,7 +67,7 @@ function moveDown(){
 function filterSubjects(e){
   console.log(e.target.id+" From client");
 
-   axios.get("http://localhost:4000/"+ e.target.id).then((response)=> console.log(response.data));
+   axios.get("http://localhost:4000/subjects/"+ e.target.id).then((response)=> console.log(response.data));
 
 }
 
